@@ -6,7 +6,7 @@ namespace Tic_Tac_Toe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("This is Brayden and Nathan's branch.");
         }
     }
 }
