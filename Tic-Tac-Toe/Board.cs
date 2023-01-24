@@ -23,7 +23,7 @@ namespace Tic_Tac_Toe
 
         // receive array from 'Driver' with markers in pos 0-8
 
-        public static string ShowBoard(string[] boardMarks)
+        public string ShowBoard(string[] boardMarks)
         {
             string currentBoard = "";
             for (int i = 0; i < boardMarks.Length; i++)
@@ -60,7 +60,7 @@ namespace Tic_Tac_Toe
 
         }
 
-        public static string CheckWinner(string[] currentBoard)
+        public string CheckWinner(string[] currentBoard)
         {
             // stores either "", "x", or "o"
 
