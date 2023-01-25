@@ -4,8 +4,10 @@ namespace Tic_Tac_Toe
 {
     class Program
     {
+        //
         static void Main(string[] args)
         {
+
             //welcome user and create board and array
             Console.WriteLine("Welcome to Tic-Tac-Toe.");
             string[] boardArray = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -23,7 +25,7 @@ namespace Tic_Tac_Toe
                 int selectedSquare = 0;
                 bool invalidInput = true;
 
-// print the board 
+                // print the board 
                 Console.WriteLine(board.ShowBoard(boardArray));
                 Console.Write("It is " + turn + "'s turn. Input the number of the square you want to claim:");
                 
