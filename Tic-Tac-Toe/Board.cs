@@ -25,9 +25,13 @@ namespace Tic_Tac_Toe
 
         public string ShowBoard(string[] boardMarks)
         {
+            // start the output string of the current board
             string currentBoard = "";
+
+            //clean the input array
             for (int i = 0; i < boardMarks.Length; i++)
             {
+                //set blanks to numbers
                 if (boardMarks[i] == null || boardMarks[i] == "")
                 {
                     boardMarks[i] = (i + 1).ToString();

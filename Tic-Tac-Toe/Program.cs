@@ -45,7 +45,11 @@ namespace Tic_Tac_Toe
 
                     if (invalidInput)
                     {
+                        // making the error message red
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("That input was invalid.  Please enter a number from 1 to 9 that has not yet been chosen.");
+                        //reset the console color
+                        Console.ResetColor();
                     }
  
                 }
