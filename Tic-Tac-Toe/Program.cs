@@ -24,7 +24,16 @@ namespace Tic_Tac_Toe
             {
                 int selectedSquare = 0;
                 bool invalidInput = true;
+                if(turn == "X")
+                {
+                    //set the color to blue
+                    Console.ForegroundColor = ConsoleColor.Blue;
 
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
                 // print the board 
                 Console.WriteLine(board.ShowBoard(boardArray));
                 Console.Write("It is " + turn + "'s turn. Input the number of the square you want to claim:");
@@ -45,7 +54,9 @@ namespace Tic_Tac_Toe
 
                     if (invalidInput)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("That input was invalid.  Please enter a number from 1 to 9 that has not yet been chosen.");
+                        Console.ResetColor();
                     }
  
                 }
