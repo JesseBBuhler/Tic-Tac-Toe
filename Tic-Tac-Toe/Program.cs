@@ -8,9 +8,10 @@ namespace Tic_Tac_Toe
         {
             Console.WriteLine("Welcome to Tic-Tac-Toe.");
             string[] boardArray = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-            //Board.ShowBoard(boardArray);
+            Board board = new Board();
+            
             bool gameOver = false;
-            string winner = " ";
+            string winner = "";
             string turn = "X";
             int turnCounter = 0;
 
@@ -22,10 +23,11 @@ namespace Tic_Tac_Toe
                 bool invalidInput = true;
 
                 //in place of Board.ShowBoard(boardArray);
-                for (int i = 0; i < boardArray.Length; i++)
-                {
-                    Console.WriteLine(boardArray[i]);
-                }
+                //for (int i = 0; i < boardArray.Length; i++)
+                //{
+                //  Console.WriteLine(boardArray[i]);
+                //}
+                Console.WriteLine(board.ShowBoard(boardArray));
                 Console.Write("It is " + turn + "'s turn. Input the number of the square you want to claim:");
                 
                 while (invalidInput)
@@ -60,7 +62,8 @@ namespace Tic_Tac_Toe
                 }
 
                 //In place of: winner = Board.CheckWinner(boardArray);
-                if(turnCounter >= 8 || winner != " ")
+                winner = board.CheckWinner(boardArray);
+                if(turnCounter >= 8 || winner != "")
                 {
                     gameOver = true;
                 }
@@ -69,12 +72,13 @@ namespace Tic_Tac_Toe
             }
 
             //in place of Board.ShowBoard(boardArray);
-            for (int i = 0; i < boardArray.Length; i++)
-            {
-                Console.WriteLine(boardArray[i]);
-            }
+            //for (int i = 0; i < boardArray.Length; i++)
+            //{
+            //    Console.WriteLine(boardArray[i]);
+            //}
+            Console.WriteLine(board.ShowBoard(boardArray));
 
-            if (winner != " ")
+            if (winner != "")
             {
                 Console.WriteLine(winner + " won the game!!!");
             }
