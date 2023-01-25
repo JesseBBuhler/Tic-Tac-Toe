@@ -22,6 +22,14 @@ namespace Tic_Tac_Toe
                 int selectedSquare = 0;
                 bool invalidInput = true;
 
+                if(turn == "X")
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
                 //in place of Board.ShowBoard(boardArray);
                 //for (int i = 0; i < boardArray.Length; i++)
                 //{
