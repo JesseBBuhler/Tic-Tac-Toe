@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Tic_Tac_Toe
 {
-    public class Board
+    public class Support
     {
         /* 
 
@@ -22,7 +22,7 @@ namespace Tic_Tac_Toe
                  |     |     
         */
 
-        // receive array from 'driver' (Program.cs) with markers in pos 0-8
+        // receive array from 'driver' (Driver.cs) with markers in pos 0-8
         public string ShowBoard(string[] boardMarks)
         {
             // initialize the output string of the current board
@@ -38,6 +38,8 @@ namespace Tic_Tac_Toe
             }
 
             // 'gameboard' *visual* creation - based on representation above ^^
+
+            // vv String formatting vv //
             currentBoard += "|".PadLeft(6, ' ') + "|".PadLeft(6, ' ').PadRight(12, ' ') + "\n";
             currentBoard += boardMarks[0].PadLeft(3) + "|".PadLeft(3) + boardMarks[1].PadLeft(3) + "|".PadLeft(3) + boardMarks[2].PadLeft(3) + "\n";
             currentBoard += "_____|_____|_____\n";
@@ -47,7 +49,7 @@ namespace Tic_Tac_Toe
             currentBoard += "|".PadLeft(6, ' ') + "|".PadLeft(6, ' ').PadRight(12, ' ') + "\n";
             currentBoard += boardMarks[6].PadLeft(3) + "|".PadLeft(3) + boardMarks[7].PadLeft(3) + "|".PadLeft(3) + boardMarks[8].PadLeft(3) + "\n";
             currentBoard += "|".PadLeft(6, ' ') + "|".PadLeft(6, ' ').PadRight(12, ' ') + "\n";
-
+            // ^^ End string formatting ^^ //
             return currentBoard;
 
         }
